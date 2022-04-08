@@ -20,7 +20,6 @@ int main(){
 			j = lps[temp];
 		}
 	}
-	cout<<""
 	for(int k=0;k<sz;k++)
 		cout <<lps[k]<<" ";
 	cout << endl;

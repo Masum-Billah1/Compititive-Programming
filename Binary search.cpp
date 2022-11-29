@@ -1,19 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-	int n;
-	cout << "Enter the size if array : ";
-	cin >> n;
-	int a[n],i,low=0,high=n-1,mid,result,q;
-	for(i=0;i<n;i++)
-		cin >> a[i];
-	cout <<"Enter the number you want to search : ";
-	cin >> q;
-	while(low<=high){
+int a[1000];
+int binary_search(int low,int high,int q){
+    int mid;
+    while(low<=high){
 		mid = low+(high-low)/2;
 		if(a[mid]==q){
-			cout <<"the index is : "<<mid<<endl;
-			return 0;
+			return mid;
 		}
 		else if(a[mid]>q){
 			high = mid-1;
@@ -21,6 +14,21 @@ int main(){
 		else
 			low = mid+1;
 	}
-	cout << "The index is not found"<<endl;
+    return -1;
+}
+int main(){
+	int n;
+	cout << "Enter the size if array : ";
+	cin >> n;
+	int i,low=0,high=n-1,result,q;
+	for(i=0;i<n;i++)
+		cin >> a[i];
+	cout <<"Enter the number you want to search : ";
+	cin >> q;
+    int temp = binary_search(low,high,q);
+    if(temp==-1)
+        cout <<"The number is not found"<<endl;
+    else
+        cout <<"The position of the number is : "<<temp<<endl;
 	
 }

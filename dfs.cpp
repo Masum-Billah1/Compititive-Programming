@@ -12,12 +12,14 @@ void dfs(int x){
 	}
 	color[x]=2;
 }
-int main(){
-	int x,y,sum=0;
+
+int main() {
+    freopen("input.txt", "r", stdin);
+    
+    int x,y,sum=0;
 	cin >> node;
 	cin >> edge;
 	for(i=0;i<edge;i++){
-		cout << "\nedge from u -> v : ";
 		cin >> x;
 		cin >> y;
 		mat[x][y]=1;

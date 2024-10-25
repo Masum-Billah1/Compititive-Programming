@@ -12,4 +12,4 @@ int main(){
     cout << a <<" "<< b << endl;
 }
 
-// There is no effect of changing main function value due to changing value of another function.
+// There is an effect of changing main function value due to changing value of another function.

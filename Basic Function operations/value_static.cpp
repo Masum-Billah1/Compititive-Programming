@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int change(int a,int b){
+int change(int &a,int &b){
     a = a+2;
     b = b+2;
     return b;
